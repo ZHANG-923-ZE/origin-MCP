@@ -41,3 +41,6 @@ jobs:
 
       - name: Run tests
         run: python -m pytest tests/ -v || echo "Note: tests require Origin COM runtime"
+
+      - name: Ruff format check
+        run: ruff format --check src/
