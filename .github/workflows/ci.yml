@@ -30,7 +30,7 @@ jobs:
       - name: Install dependencies
         run: uv pip install --system -e ".[dev]"
 
-      - name: Install lint & type tools
+      - name: Install lint and type tools
         run: uv pip install --system ruff pyright
 
       - name: Ruff lint
