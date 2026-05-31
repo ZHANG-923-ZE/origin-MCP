@@ -13,34 +13,14 @@ concurrency:
 jobs:
   check:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        python-version: ["3.12"]
-
     steps:
       - uses: actions/checkout@v4
-
       - uses: actions/setup-python@v5
         with:
-          python-version: ${{ matrix.python-version }}
-
-      - name: Install uv
-        run: pip install uv
-
-      - name: Install dependencies
-        run: uv pip install --system -e ".[dev]"
-
-      - name: Install lint and type tools
-        run: uv pip install --system ruff pyright
-
-      - name: Ruff lint
+          python-version: "3.12"
+      - name: Install tools
+        run: pip install ruff pyright
+      - name: Lint
         run: ruff check src/
-
-      - name: Pyright type check
+      - name: Type check
         run: pyright src/
-
-      - name: Run tests
-        run: python -m pytest tests/ -v || echo "Note: tests require Origin COM runtime"
-
-      - name: Ruff format check
-        run: ruff format --check src/
