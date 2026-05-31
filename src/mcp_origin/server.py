@@ -2,7 +2,7 @@
 
 from mcp.server.fastmcp import FastMCP
 
-from mcp_origin.core.connection import ensure_origin, get_origin_status
+from mcp_origin.core.connection import get_origin_status
 from mcp_origin.core.constants import PLOT_TYPE_MAP
 from mcp_origin.tools.data import create_worksheet, set_column_data, import_csv, get_column_info
 from mcp_origin.tools.plot import create_plot, create_multi_curve_plot, create_grouped_plot, create_multi_panel_plot, add_plot_to_graph
