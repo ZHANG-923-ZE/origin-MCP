@@ -1,0 +1,41 @@
+[project]
+name = "mcp-origin-pro"
+version = "0.1.0"
+description = "MCP server for Origin 2025b scientific graphing via natural language"
+requires-python = ">=3.10"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [
+    { name = "ZHANG-923-ZE" },
+]
+keywords = ["mcp", "origin", "originpro", "scientific-graphing", "model-context-protocol"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: Microsoft :: Windows",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Visualization",
+]
+dependencies = [
+    "mcp[cli]>=1.0.0",
+]
+
+[project.urls]
+Repository = "https://github.com/ZHANG-923-ZE/origin-MCP"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "pytest-asyncio>=0.23",
+    "pytest-mock>=3.12",
+]
+
+[project.scripts]
+mcp-origin-pro = "mcp_origin.server:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
