@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.env
+
+# IDE
+.vscode/
+.idea/
+
+# Origin
+*.opju
+*.opj
+
+# Exports
+exports/
+*.png
+*.svg
+*.emf
+*.pdf
+
+# Auxiliary tool directories (local only)
+.golutra/
+.obsidian/
+.opencode/
+.opencode-runtime/
+.sisyphus/
+
+# uv
+.venv/
+uv.lock
